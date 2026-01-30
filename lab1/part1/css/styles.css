@@ -1,16 +1,15 @@
+body {
+  font: 1.2em / 1.5 system-ui;
+}
 
-  body {
-    font: 1.2em / 1.5 system-ui;
-  }
+.sender-column {
+  text-align: right;
+}
 
-  .sender-column {
-    text-align: right;
-  }
+h1 {
+  font-size: 1.5em;
+}
 
-  h1 {
-    font-size: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.3em;
-  }
+h2 {
+  font-size: 1.3em;
+}
