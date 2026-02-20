@@ -4,4 +4,18 @@ html {
 
 body {
   font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EFEFEF
+}
+
+ul {
+  padding: 30px;
+  background-color: #FFFFFFFF;
+  border-color: rgb(172, 43, 201);
+  border-radius: 20px;
 }
