@@ -18,7 +18,11 @@ const events = ["spontaneously combusted", "melted into a puddle on the sidewalk
 
 function returnRandomStoryString() {
 
-  storyText = "It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day";
+const randomCharacters = randomValueFromArray(characters);
+const randomPlaces = randomValueFromArray(places);
+const randomEvents = randomValueFromArray(events);
+
+  storyText = "It was 94 Fahrenheit outside, so Bob went for a walk. When they got to the bar, they stared in horror for a few moments, then melted. Bob saw the whole thing, but was not surprised — Bob weighs 300 pounds, and it was a hot day";
   
   storyText = storyText.replaceALL();
   storyText = storyText.replaceALL();
