@@ -22,7 +22,7 @@ const randomCharacters = randomValueFromArray(characters);
 const randomPlaces = randomValueFromArray(places);
 const randomEvents = randomValueFromArray(events);
 
-  storyText = "It was 94 Fahrenheit outside, so Bob went for a walk. When they got to the bar, they stared in horror for a few moments, then melted. Bob saw the whole thing, but was not surprised — Bob weighs 300 pounds, and it was a hot day";
+let storyText = 'It was 94 Fahrenheit outside, so Bob went for a walk. When they got to the bar, they stared in horror for a few moments, then melted. Bob saw the whole thing, but was not surprised — Bob weighs 300 pounds, and it was a hot day';
   
   storyText = storyText.replaceALL();
   storyText = storyText.replaceALL();
@@ -33,6 +33,8 @@ const randomEvents = randomValueFromArray(events);
 // Event listener and partial generate function definition
 
 generateBtn.addEventListener("click", generateStory);
+
+let newStory = returnRandomStoryString();
 
 function generateStory() {
   if (customName.value !== "") {
