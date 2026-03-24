@@ -22,11 +22,12 @@ const randomCharacters = randomValueFromArray(characters);
 const randomPlaces = randomValueFromArray(places);
 const randomEvents = randomValueFromArray(events);
 
-let storyText = 'It was 94 Fahrenheit outside, so Bob went for a walk. When they got to the bar, they stared in horror for a few moments, then melted. Bob saw the whole thing, but was not surprised — Bob weighs 300 pounds, and it was a hot day';
+let storyText = 'It was 94 Fahrenheit outside, so ${randomCharacters} went for a walk. When they got to ${randomPlaces}, they stared in horror for a few moments, then ${randomEvents}. Bob saw the whole thing, but was not surprised — ${randomCharacters} weighs 300 pounds, and it was a hot day';
   
-  storyText = storyText.replaceALL();
-  storyText = storyText.replaceALL();
-  storyText = storyText.replaceALL();
+  storyText = storyText.replaceAll();
+  storyText = storyText.replaceAll();
+  storyText = storyText.replaceAll();
+  
   return storyText;
 }
 
@@ -39,12 +40,12 @@ let newStory = returnRandomStoryString();
 function generateStory() {
   if (customName.value !== "") {
     const name = customName.value;
-    newStory = newStory.replaceALL("Bob", name);
+    newStory = newStory.replaceAll("Bob", name);
   }
 
   if (document.getElementById("uk").checked) {
     const weight = Math.round(300/14.0) + " stone";
-    newStory = newStory.replaceALL("300 pounds", weight)
+    newStory = newStory.replaceAll("300 pounds", weight)
     const temperature = Math.round((94 - 32)* 5.0/9.0) + " celsius";
     newStory = newStory.replace("94 Fahrenheit", celsius)
   }
