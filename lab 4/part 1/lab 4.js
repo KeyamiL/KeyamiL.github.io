@@ -17,7 +17,6 @@ const events = ["spontaneously combusted", "melted into a puddle on the sidewalk
 // Partial return random string function
 
 function returnRandomStoryString() {
-
 const randomCharacters = randomValueFromArray(characters);
 const randomPlaces = randomValueFromArray(places);
 const randomEvents = randomValueFromArray(events);
@@ -51,8 +50,7 @@ function generateStory() {
   }
 
   // TODO: replace "" with the correct expression
-  story.textContent = "";
+  story.textContent = newStory;
   story.style.visibility = "visible";
   story.style.textDecoration = 'underline';
-  story.style.
 }
