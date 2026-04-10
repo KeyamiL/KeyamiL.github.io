@@ -15,20 +15,23 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    We want your feedback!
+    
+    <form>
+    
+        <h1>We want your feedback!</h1>
 
-    We're very excited that you visited the little house in the woods,
+    <p> We're very excited that you visited the little house in the woods,
     and we want to hear what you thought of it! Please fill in the below
     sections. You don't need to provide your name or contact details, but
     if you do, we'll enter you into a prize draw where you'll have a chance
     to win prizes.
-
+    </p>
     --
 
     
-    Facilities
+    <h2> Facilities </h2>
 
-    Was the porridge
+    <h3> Was the porridge </h3>
     <input type ="radio" id = "tempHot" name = "temp" value = "Too hot?" />
     <label for = "tempHot"> Too hot? </label> 
 
@@ -39,7 +42,7 @@
     <label for = "tempMed"> Just right? </label>
     
 
-    Were the beds
+    <h3> Were the beds </h3>
     <input type = "radio" id = "bedHard" name = "beds" value = "Too hard?" />
     <label for = "bedHard"> Too hard? </label>
 
@@ -49,7 +52,7 @@
     <input type = "radio" id = "bedMed" name = "beds" value = "Just right?" />
     <label for = "bedMed"> Just right? </label>
 
-    Describe the chairs (select all you agree with)
+    <h3> Describe the chairs (select all you agree with) </h3>
 
     <input type = "checkbox" id = "chairComfy" name = "chairs" value = "Comfy" />
     <label for = "chairComfy"> Comfy </label>
@@ -65,11 +68,12 @@
 
     <input type = "checkbox" id = "chairMajestic" name = "chairs" value = "Majestic" />
     <label for = "chairMajestic"> Majestic </label>
-
+<br/>
     --
-
+    <h3>
     <Label for = "hosts" > About your hosts </Label>
-    
+    </h3>
+
     <select name = "hosts" id = "hosts"> 
     <option value = ""> Who's your favorite bear? </option> 
     <option value = "Papa bear"> Papa bear </option>
@@ -88,10 +92,10 @@
     <option value = "Claw marks in the door"> Claw marks in the door </option> 
 
     </select>
-    
+     <br/>
     --
 
-    Any other feedback?  
+    <h2> Any other feedback? </h2>  
     
     <label for = "feedback" > Give us your comment </label>
       
@@ -99,20 +103,26 @@
 
     --
 
-    Your details
+    <h2> Your details </h2>
    
     
     <label for = "name"> Name </label>
     <input type = "text" id = "nameDetail" name = "detail" value = "Enter Name Here: " /> 
+        <br/>
 
     <label for = "Email"> Email </label>
     <input type = "text" id = "emailDetail" name = "detail" value = "Enter Email Here: " /> 
+        <br/>
 
     <label for = "Phone"> Phone </label>
     <input type = "text" id = "phoneDetail" name = "detail" value = "Enter Phone Here: " /> 
+        <br/>
+
     --
 
     <button> Submit </button>
+
+    </form>
 
    </body>
 </html>
