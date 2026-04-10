@@ -79,20 +79,23 @@
 
     </select>
 
-
-    <Label for = "greeting" > Which greeting did you prefer? </Label>
-
-    <select name = "hosts" id = "hosts"> 
+      
+    <select name = "hosts" id = "hosts">
+    <option value = "">Which greeting did you prefer?</option>
     <option value = "Wave"> Wave </option>
     <option value = "Friendly greeting"> Friendly greeting </option>
     <option value = "Growl"> Growl </option>
     <option value = "Claw marks in the door"> Claw marks in the door </option> 
 
+    </select>
+    
     --
 
-    Any other feedback?
-
-    Give us your comments
+    Any other feedback?  
+    
+    <label for = "feedback" > Give us your comment </label>
+      
+    <textarea id = "feedback" name = "feedback" rows="10" cols="30"> </textarea>
 
     --
 
@@ -104,8 +107,7 @@
 
     --
 
-    Submit
+    <button> Submit </button>
 
-    --
-  </body>
+   </body>
 </html>
