@@ -30,9 +30,11 @@ let storyText = 'It was 94 Fahrenheit outside, so ${randomCharacters} went for a
 
 generateBtn.addEventListener("click", generateStory);
 
-let newStory = returnRandomStoryString();
+
 
 function generateStory() {
+  let newStory = returnRandomStoryString();
+  
   if (customName.value !== "") {
     const name = customName.value;
     newStory = newStory.replaceAll("Bob", name);
