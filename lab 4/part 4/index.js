@@ -70,33 +70,39 @@ class Ball {
 }
 
 class EvilCircle extends Shape {
-
-  constructor(x, y) {
-   
-  Shape.super(x, y, 20, 20);
-  this.color = "white";
-  this.size = 10;
-    
-  window.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "a":
-      this.x -= this.velX;
-      break;
-    case "d":
-      this.x += this.velX;
-      break;
-    case "w":
-      this.y -= this.velY;
-      break;
-    case "s":
-      this.y += this.velY;
-      break;
-      
-  }
-});
-  }
   
+  constructor(x, y) { 
+    Shape.super(x, y, 20, 20);
+    this.color = "white";
+    this.size = 10;
+    
+    window.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "a":
+        this.x -= this.velX;
+        break;
+      case "d":
+        this.x += this.velX;
+        break;
+      case "w":
+        this.y -= this.velY;
+        break;
+      case "s":
+        this.y += this.velY;
+        break;
 
+    }
+  });
+
+  }
+  draw() {
+    ctx.beginPath();
+    lineWidth = 3
+    ctx.strokeStyleStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+
+}
 }
 
 const balls = [];
