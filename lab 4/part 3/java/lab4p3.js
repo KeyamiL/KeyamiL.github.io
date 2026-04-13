@@ -99,11 +99,6 @@ const testBall = new Ball(50, 100, 4, 4, "blue", 10);
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
-  for (const ball of balls) {
-    ball.draw();
-    ball.update();
-  }
-  
   function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
@@ -116,8 +111,10 @@ const testBall = new Ball(50, 100, 4, 4, "blue", 10);
 
   requestAnimationFrame(loop);
 }
-
   requestAnimationFrame(loop);
 }
+
+  requestAnimationFrame(loop);
+
   loop();
 

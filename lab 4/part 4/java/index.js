@@ -107,7 +107,7 @@ class EvilCircle extends Shape {
   draw() {
     ctx.beginPath();
     ctx.lineWidth = 3
-    ctx.strokeStyleStyle = this.color;
+    ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
 
@@ -169,7 +169,7 @@ const newEvilCircle = new EvilCircle(50, 100,);
  
 
 // Loop
-  function loop() {
+ function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
@@ -177,37 +177,15 @@ const newEvilCircle = new EvilCircle(50, 100,);
   newEvilCircle.checkBounds();
   newEvilCircle.draw();
 
-  {
   for (const ball of balls) {
     if (ball.exists) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
-  }
-
-  function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
-  ctx.fillRect(0, 0, width, height);
-
-  newEvilCircle.collisionDetect();
-  newEvilCircle.checkBounds();
-  newEvilCircle.draw();
-
-  {
-  for (const ball of balls) {
-    if (ball.exists = true) 
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
 
   requestAnimationFrame(loop);
 }
-  }
-const Ballcount = document.querySelector("p"); 
 
-  requestAnimationFrame(loop);
-}
-  loop();
+loop();
