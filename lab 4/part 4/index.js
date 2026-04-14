@@ -2,6 +2,9 @@
 
 console.log("JS is running");
 
+const para = document.querySelector("p");
+let count = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -146,6 +149,8 @@ class EvilCircle extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          count--;
+          para.textContent = "Ball count: " + count;
         }
       
       }
@@ -169,6 +174,8 @@ while (balls.length < 40) {
   );
 
   balls.push(ball);
+  count++;
+  para.textContent = "Ball count: " + count;
 }
  
 
@@ -194,5 +201,7 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
+
+
 
 loop();
