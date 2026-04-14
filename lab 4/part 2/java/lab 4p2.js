@@ -45,11 +45,11 @@ btn.addEventListener ("click",  () => {
      if (btn.classList = ("dark")) {
      btn.textContent("Lighten");
      overlay.style.backgroundColour = "rgb (0 0 0 / 0.5)";
-     }
+     } else {
         
-      
 
-     else
+
+     }
 
         
         

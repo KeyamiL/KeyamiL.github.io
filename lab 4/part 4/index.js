@@ -1,5 +1,7 @@
 // setup canvas
 
+console.log("JS is running");
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -18,14 +20,28 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-class Ball {
+class Shape {
+  constructor(x, y, velX, velY) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+
+  }
+    
+}
+
+class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
+    super(x, y, velX, velY,)
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
     this.color = color;
     this.size = size;
+    this.exists = true;
+
   }
    draw() {
     ctx.beginPath();
@@ -72,7 +88,7 @@ class Ball {
 class EvilCircle extends Shape {
   
   constructor(x, y) { 
-    Shape.super(x, y, 20, 20);
+    super(x, y, 20, 20);
     this.color = "white";
     this.size = 10;
     
@@ -97,27 +113,27 @@ class EvilCircle extends Shape {
   }
   draw() {
     ctx.beginPath();
-    lineWidth = 3
-    ctx.strokeStyleStyle = this.color;
+    ctx.lineWidth = 3
+    ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
 
 }
   checkBounds() {
     if (this.x + this.size >= width) {
-      this.x = -this.y;
+      this.x = -this.size;
     }
 
     if (this.x - this.size <= 0) {
-      this.x = -this.y;
+      this.x = -this.size;
     }
 
     if (this.y + this.size >= height) {
-      this.x = -this.y;
+      this.x = -this.size;
     }
 
     if (this.y - this.size <= 0) {
-      this.x = -this.y;
+      this.x = -this.size;
     }
 
   }
@@ -129,7 +145,7 @@ class EvilCircle extends Shape {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          ball.exists() = false;
+          ball.exists = false;
         }
       
       }
@@ -160,7 +176,7 @@ const newEvilCircle = new EvilCircle(50, 100, 4, 4, "blue", 10);
  
 
 // Loop
-  function loop() {
+function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
@@ -168,37 +184,15 @@ const newEvilCircle = new EvilCircle(50, 100, 4, 4, "blue", 10);
   newEvilCircle.checkBounds();
   newEvilCircle.draw();
 
-  {
   for (const ball of balls) {
-    if (ball.exists = true)
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
-  }
-
-  function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
-  ctx.fillRect(0, 0, width, height);
-
-  newEvilCircle.collisionDetect();
-  newEvilCircle.checkBounds();
-  newEvilCircle.draw();
-
-  {
-  for (const ball of balls) {
-    if (ball.exists = true) 
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
 
   requestAnimationFrame(loop);
 }
 
-const Ballcount = document.querySelector("para"); 
-
-  requestAnimationFrame(loop);
-}
-  loop();
+loop();
