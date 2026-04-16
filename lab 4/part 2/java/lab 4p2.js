@@ -22,11 +22,11 @@ for (const image of images) {
 // Image elements
 
 const images2 = [
-                { src: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg', alt: 'Closeup of a human eye'},  
-                { src: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg', alt: 'Rock that looks like a wave'},
-                { src: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg', alt: 'Purple and white pansies'},
-                { src: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg', alt: 'Section of wall from pharaohs tomb'},  
-                { src: 'https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg', alt: 'Large moth on a leaf'}, 
+                { src: `https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg`, alt: `Closeup of a human eye`},  
+                { src: `https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg`, alt: `Rock that looks like a wave`},
+                { src: `https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg`, alt: `Purple and white pansies`},
+                { src: `https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg`, alt: `Section of wall from pharaohs tomb`},  
+                { src: `https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg`, alt: `Large moth on a leaf`}, 
 
           thumbBar.appendChild(images2),
           images2.updateDisplayedImage("click", () => {
@@ -38,7 +38,7 @@ const images2 = [
           
 ]  
 
-const updateDisplayedImage = (displayedImage = '${src} ${alt}');
+const updateDisplayedImage = (displayedImage = `${src} ${alt}`);
 
 btn.addEventListener ("click",  () => {
 
