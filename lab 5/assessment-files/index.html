@@ -16,7 +16,7 @@
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
     <![endif]-->
   </head>
 
@@ -33,7 +33,7 @@
       </ul>
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query">
+        <input type="search" name="q" placeholder="Search query" aria-label= "Search through site content.">
         <input type="submit" value="Go!">
       </form>
     </nav>
@@ -136,12 +136,18 @@
 
         
 
+        
+         
         <figure>
-          <figcaption> "This isn't really an audio fact file about bears. But is is an audio file you can transcribe." </figcaption>
-          <audio src="media/bear.mp3" type="audio/mp3">
-          <audio src="media/bear.ogg" type="audio/ogg">
-          <p>It looks like your browser doesn't support HTML5 audio players.</p>
+          <figcaption> "This isn't really an audio fact file about bears. But is is an audio file that you can transcribe." </figcaption>
+          <audio controls src = "media/bear.mp3" type="audio/mp3"></audio> 
+          
+          
+          <figcaption> It looks like your browser doesn't support HTML5 audio players; </figcaption>
+          <audio controls src = "media/bear.ogg" type="audio/ogg"></audio> 
+
         </figure>
+
         </p>
 
         <aside>
@@ -161,21 +167,21 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <p class="show-hide">Show comments</p>
 
           <div class="comment-wrapper">
 
             <h3>Add comment</h3>
 
             <form class="comment-form">
-              <div class="flex-pair">
+              <p class="flex-pair">
                 Your name:
-                <input type="text" name="name" id="name" placeholder="Enter your name">
-              </div>
-              <div class="flex-pair">
+                <input type="text" name="name" id="name" placeholder="Enter your name" aria-label = "Enter your name here.">
+              </p>
+              <p class="flex-pair">
                 Your comment:
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
-              </div>
+                <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label = "Leave a comment here.">
+              </p>
               <div>
                 <input type="submit" value="Submit comment">
               </div>
