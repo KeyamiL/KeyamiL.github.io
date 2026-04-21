@@ -54,7 +54,7 @@ p, li, table {
 /* || header layout */
 
 nav, article, footer, .secondary {
-  background-color: rgb(255, 254, 249);
+  background-color: rgb(255, 254, 250);
 }
 
 article, footer, .secondary {
@@ -176,7 +176,7 @@ audio {
 /* Comments styling */
 
 .comments {
-  background-color: #def;
+  background-color: rgb(225, 238, 221);
   padding: 10px;
 }
 
